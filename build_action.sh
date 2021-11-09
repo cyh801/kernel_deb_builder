@@ -35,4 +35,7 @@ make -j"$CPU_CORES"
 # move deb packages to artifact dir
 cd ..
 mkdir "artifact"
-mv ./ artifact/
+mv ./uInitrd artifact/
+mv ./zImage artifact/
+mv ./*.dtb artifact/
+
