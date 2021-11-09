@@ -30,7 +30,7 @@ source ../patch.d/*.sh
 
 # build deb packages
 CPU_CORES=$(($(grep -c processor < /proc/cpuinfo)*2))
-make ARCH=arm64 CROSS_COMPILE=aarch64-linux- -j24-j"$CPU_CORES"
+make ARCH=arm64 CROSS_COMPILE=aarch64-linux- -j24 "$CPU_CORES"
 
 # move deb packages to artifact dir
 cd ..
